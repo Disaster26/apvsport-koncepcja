@@ -8,7 +8,7 @@
 <meta name="description" content="Bieżnie elektryczne APVsport prosto od producenta: seria APV8000 z silnikiem do 6 KM, pasem 145 x 58 cm i ekranem Android po polsku. Raty 0%, serwis i części. Tel. 660 489 335.">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/hero-760.webp" imagesrcset="img/hero-480.webp 480w, img/hero-760.webp 760w, img/hero-833.webp 833w" imagesizes="(min-width:761px) 48vw, 92vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-760.webp" imagesrcset="img/hero-480.webp 480w, img/hero-760.webp 760w, img/hero-833.webp 833w" imagesizes="min(833px, 94vw)" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/b800-italic-r.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/b400-normal-r.woff2" crossorigin>
 <style>
@@ -93,8 +93,10 @@ p{margin:0}
 .hero .info span::before{content:"";width:16px;height:8px;background:var(--r);clip-path:polygon(4px 0,100% 0,calc(100% - 4px) 100%,0 100%)}
 .scena{position:relative;flex:1 1 0;min-height:max(190px,30svh);width:100%;margin-top:clamp(8px,2vh,24px)}
 .luk{position:absolute;left:-6%;right:-6%;bottom:-2%;height:78%;width:112%;fill:var(--r)}
-.pw{position:absolute;left:0;right:0;margin:0 auto;bottom:clamp(6px,2.4vh,30px);height:calc(100% - clamp(6px,2.4vh,30px));aspect-ratio:833/688;max-width:94vw}
+.pw{position:absolute;left:0;right:0;margin:0 auto;bottom:clamp(6px,2.4vh,30px);height:calc(100% - clamp(6px,2.4vh,30px));aspect-ratio:833/688;max-width:94vw;max-height:688px}
 .pw img{width:100%;height:100%;object-fit:contain;object-position:50% 100%}
+/* zdjecie 833 px: na ekranach o duzej gestosci pikseli mniejsze, zeby nie powiekszac pliku */
+@media (min-resolution:1.5dppx){.pw{max-height:505px}}@media (min-resolution:2dppx){.pw{max-height:380px}}@media (min-resolution:2.6dppx){.pw{max-height:270px}}
 .ob{display:none}
 @media (min-width:1100px){
   .ob{display:block;position:absolute;z-index:3;font-size:clamp(14px,.8vw,17px);line-height:1.3;text-align:left;white-space:nowrap}
@@ -311,7 +313,7 @@ form .btn{justify-self:start}
   <div class="scena">
     <svg class="luk" viewBox="0 0 1600 520" preserveAspectRatio="none" aria-hidden="true"><path d="M0 520C380 300 900 96 1600 18 1050 150 560 340 250 520Z"/></svg>
     <div class="pw">
-      <img src="img/hero-760.webp" srcset="img/hero-480.webp 480w, img/hero-760.webp 760w, img/hero-833.webp 833w" sizes="(min-width:761px) 48vw, 92vw" width="833" height="688" fetchpriority="high" decoding="async" alt="Bieżnia elektryczna APVsport APV8000 z dotykowym ekranem Android">
+      <img src="img/hero-760.webp" srcset="img/hero-480.webp 480w, img/hero-760.webp 760w, img/hero-833.webp 833w" sizes="min(833px, 94vw)" width="833" height="688" fetchpriority="high" decoding="async" alt="Bieżnia elektryczna APVsport APV8000 z dotykowym ekranem Android">
       <p class="ob l" style="--x:21%;top:11%;--dl:clamp(150px,11vw,240px)"><b>Ekran dotykowy Android</b><span>menu w języku polskim</span></p>
       <p class="ob l" style="--x:13%;top:56%;--dl:clamp(110px,8vw,190px)"><b>Silnik 6 KM</b><span>10 KM mocy szczytowej</span></p>
       <p class="ob p" style="--x:66%;top:64%;--dl:clamp(150px,13vw,280px)"><b>Pas biegowy 145 x 58 cm</b><span>nachylenie 0-20%</span></p>
