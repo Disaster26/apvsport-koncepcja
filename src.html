@@ -132,6 +132,7 @@ p{margin:0}
 .tor>*{scroll-snap-align:start;min-width:0}
 .tor.drag{cursor:grabbing;scroll-behavior:auto}
 .tor.drag *{pointer-events:none}
+@media (min-width:1281px){#tor8000{grid-auto-columns:calc((100% - 2*var(--gap))/3)}}
 @media (max-width:1280px){.tor{grid-auto-columns:calc((100% - 2*var(--gap))/3)}}
 @media (max-width:900px){.tor{grid-auto-columns:calc((100% - var(--gap))/2)}}
 @media (max-width:600px){.tor{grid-auto-columns:84%}}
