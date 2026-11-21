@@ -1,5 +1,6 @@
 # Buduje index.html z src.html: logo SVG, znak Wylinki (oficjalny fragment), karty produktow.
 # Nazwy i ceny z aquaholm.pl (WooCommerce Store API) - wg klienta obowiazujace, sprawdzone 20.11.2026.
+# Elite Series (21.11 klient: pokazac, brak w aquaholm.pl przez pomylke) - ceny z apvsport.pl Store API 21.11.2026 (takie same jak W8).
 import html as H, re
 s = open('src.html', encoding='utf-8').read()
 svg = open('img/logo.svg', encoding='utf-8').read()
@@ -19,6 +20,7 @@ def wersje(ws):
     return '<ul class="wer">' + ''.join(f'<li><span>{H.escape(n)}</span><b>{c} zł{f"<s>{o} zł</s>" if o else ""}</b></li>' for n, c, o in ws) + '</ul>'
 
 SERIE = [
+    ('elitek', 'APV8000 Elite Series', 'Ekran dotykowy Android 10,1", pas 145 x 58 cm.', 'Bieżnia APVsport APV8000 Elite Series'),
     ('futura', 'APV8000 Futura Prestige', 'Największy ekran: dotykowy Android 15,6", pas 145 x 58 cm.', 'Bieżnia APVsport APV8000 Futura Prestige z ekranem 15,6 cala'),
     ('premium', 'APV8000 Premium Line', 'Ekran dotykowy Android 10,1", pas 145 x 58 cm.', 'Bieżnia APVsport APV8000 Premium Line'),
     ('top', 'APV8000 Top Quality', 'Ekran dotykowy Android 10,1", pas 145 x 58 cm.', 'Bieżnia APVsport APV8000 Top Quality'),
